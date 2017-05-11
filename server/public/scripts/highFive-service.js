@@ -11,17 +11,16 @@ myApp.service('HighFive', function(){
    counter++;
  };
 
-this.highFive = function (){
+this.highFive = function (skill){
   var randomNum = function (max, min) {
     return Math.floor(Math.random() * (max - min)) + min;
   };
   var quality = randomNum(1, 10);
-  var skill = randomNum(1, 10);
-  if ( quality >= skill ) {
-   return true;
- } else {
-   return false;
- }//end if
+  if  (quality >= skill ) {
+    return true;
+  }else{
+    return false;
+  }
 };//end highFive
 
 });//end get
