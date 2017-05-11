@@ -3,7 +3,7 @@ body {
   font-family: 'Unica One', cursive;
   background-color:#A1A194;
   color: #FFB03B;
-  /*border-bottom: solid 2em #FFB03B;*/
+  border-bottom: solid 2em #FFB03B;
   padding-top: 1em;
   padding-bottom: 1em;
 }
@@ -12,10 +12,7 @@ body {
   background-color: #10222B;
   padding: 3em;
   margin: 2em 3em 2em 3em;
-  border-left: solid 0.6em #FFB03B;
-  border-right: dashed 0.3em #91BED4;
-  border-top: dashed 0.3em #91BED4;
-  border-bottom: dotted 0.3em #91BED4;
+  border: dotted 0.3em #91BED4;
 }
 
 h1{
@@ -36,6 +33,6 @@ button{
   border-radius: 0.4em;
   background-color: #91BED4;
   color: #10222B;
-  border-color: #FFB03B;
+  border-color: #10222B;
   border-width: thick;
 }
