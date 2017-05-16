@@ -1,14 +1,30 @@
 myApp.service('HighFive', function() {
 
-  var counter = 0;
+  var counter = {
+    miche: 0,
+    leo: 0,
+    tello: 0
+  };
 
   this.counterGetter = function() {
     return counter;
   };
 
-  this.counterSetter = function() {
+  this.totalCount = function(){
+  var allCount = (counter.miche + counter.leo + counter.tello);
+  return allCount;
+};
+
+  this.counterSetter = function(name) {
     console.log("counter setter running");
-    counter++;
+    if (name === 'miche') {
+      counter.miche++;
+  } if (name === 'leo') {
+      counter.leo++;
+  } if ( name === 'tello'){
+    counter.tello++;
+  }
+
   };
 
   this.randomNum = function(max, min) {

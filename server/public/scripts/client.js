@@ -19,90 +19,89 @@ myApp.config(function($routeProvider, $locationProvider){
 
 });//end ang-route config
 
-myApp.controller('DefaultController', function(mCounter, lCounter, tCounter) {
+myApp.controller('DefaultController', function(HighFive) {
   console.log('DefaultController loaded');
-  var vm = this;
-
-  vm.allCount = function (){
-    vm.mcount = mCounter.counterGetter();
-    vm.lcount = lCounter.counterGetter();
-    vm.tcount = tCounter.counterGetter();
-  };
+  // var vm = this;
+  //
+  // vm.allCount = function (){
+  //   vm.count = HighFive.counterGetter();
+  // };
 });
 
-// vm.newHighFive = function( min, max ) {
-//   vm.count = HighFive.counterGetter();
-//   vm.skill = HighFive.randomNum(min, max);
-//   return(vm.skill);
-// };
-//
-// vm.highFive = function(skill) {
-//   var success = HighFive.highFive(skill);
-//   if (success) {
-//     HighFive.counterSetter();
-//   }
-//   vm.count = HighFive.counterGetter();
-// }; //end high five function
-// });
 
-
-myApp.controller('Miche', function(HighFive, mCounter) {
+myApp.controller('Miche', function(HighFive) {
   console.log('NG');
 
   var vm = this;
 
-  vm.newHighFiveM = function() {
-    vm.count = mCounter.counterGetter();
+  vm.newHighFive = function() {
+    vm.allCount = HighFive.counterGetter();
+    vm.count = vm.allCount.miche;
+    vm.totalCount = HighFive.totalCount();
     vm.skill = HighFive.randomNum(1, 10);
     console.log(vm.skill);
   }; //end new high five function
 
-  vm.highFiveM = function(skill) {
+  vm.highFive = function(skill) {
     var success = HighFive.highFive(skill);
     if (success) {
-      mCounter.counterSetter();
+      HighFive.counterSetter('miche');
     }
-   vm.count = mCounter.counterGetter();
+    vm.allCount = HighFive.counterGetter();
+    vm.count = vm.allCount.miche;
+    vm.totalCount = HighFive.totalCount();
   };
   //end high five function
 }); //end controller
 
-myApp.controller('Tello', function(HighFive, tCounter) {
+
+myApp.controller('Tello', function(HighFive) {
   console.log('NG');
 
   var vm = this;
 
-  vm.newHighFiveT = function() {
-    vm.tcount = tCounter.counterGetter();
-    vm.tskill = HighFive.randomNum(4, 10);
-    console.log(vm.tskill);
+  vm.newHighFive = function() {
+    vm.allCount = HighFive.counterGetter();
+    vm.count = vm.allCount.tello;
+    vm.totalCount = HighFive.totalCount();
+    vm.skill = HighFive.randomNum(4, 10);
+    console.log(vm.skill);
   }; //end new high five function
 
-  vm.highFiveT = function(skill) {
+  vm.highFive = function(skill) {
     var success = HighFive.highFive(skill);
     if (success) {
-      tCounter.counterSetter();
+      HighFive.counterSetter('tello');
     }
-    vm.tcount = tCounter.counterGetter();
-  }; //end high five function
+    vm.allCount = HighFive.counterGetter();
+    vm.count = vm.allCount.tello;
+    vm.totalCount = HighFive.totalCount();
+  };
+  //end high five function
 }); //end controller
 
-myApp.controller('Leo', function(HighFive, lCounter) {
+
+myApp.controller('Leo', function(HighFive) {
   console.log('NG');
 
   var vm = this;
 
-  vm.newHighFiveL = function() {
-    vm.lcount = lCounter.counterGetter();
-    vm.lskill = HighFive.randomNum(6, 10);
-    console.log(vm.lskill);
+  vm.newHighFive = function() {
+    vm.allCount = HighFive.counterGetter();
+    vm.count = vm.allCount.leo;
+    vm.totalCount = HighFive.totalCount();
+    vm.skill = HighFive.randomNum(6, 10);
+    console.log(vm.skill);
   }; //end new high five function
 
-  vm.highFiveL = function(skill) {
+  vm.highFive = function(skill) {
     var success = HighFive.highFive(skill);
     if (success) {
-      lCounter.counterSetter();
+      HighFive.counterSetter('leo');
     }
-    vm.lcount = lCounter.counterGetter();
-  }; //end high five function
+    vm.allCount = HighFive.counterGetter();
+    vm.count = vm.allCount.leo;
+    vm.totalCount = HighFive.totalCount();
+  };
+  //end high five function
 }); //end controller

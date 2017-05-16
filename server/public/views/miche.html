@@ -3,7 +3,8 @@
   <h1>Michelangelo</h1>
   <h3>So Pizza.</h3>
 </div>
-<div ng-controller = "Miche as hf" ng-init="hf.newHighFiveM()">
+<div ng-controller = "Miche as hf" ng-init="hf.newHighFive()">
   <h2>Sucessful High Fives...{{hf.count}}</h2>
-  <button ng-click='hf.highFiveM(hf.skill)'>Give High Five</button>
+  <h2>Total High Fives...{{hf.totalCount}}</h2>
+  <button ng-click='hf.highFive(hf.skill)'>Give High Five</button>
 </div>

@@ -8,9 +8,6 @@
     <script src="/vendor/angular-route.min.js" type="text/javascript"></script>
     <script src="/scripts/client.js" type="text/javascript"></script>
     <script src="scripts/highFive-service.js" type="text/javascript"></script>
-    <script src="scripts/lcounter.js" type="text/javascript"></script>
-    <script src="scripts/mcounter.js" type="text/javascript"></script>
-    <script src="scripts/tcounter.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css"  />
     <base href="/">
@@ -24,10 +21,7 @@
           <li><a href="/leonardo">Leonardo</a></li>
         </ul>
       </nav>
-      <div ng-controller = "DefaultController as hf" ng-init ="hf.allCount()">
-        {{hf.lcount}}
-        {{hf.mcount}}
-        {{hf.tcount}}
+      <div ng-controller = "DefaultController as hf">
       </div>
       <ng-view></ng-view>
   </body>

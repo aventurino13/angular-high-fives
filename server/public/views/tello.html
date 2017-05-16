@@ -3,7 +3,8 @@
   <h1>Donatello</h1>
   <h3>Yum Pizza</h3>
 </div>
-<div ng-controller = "Tello as hf" ng-init="hf.newHighFiveT()">
-  <h2>Sucessful High Fives...{{hf.tcount}}</h2>
-  <button ng-click='hf.highFiveT(hf.tskill)'>Give High Five</button>
+<div ng-controller = "Tello as hf" ng-init="hf.newHighFive()">
+  <h2>Sucessful High Fives...{{hf.count}}</h2>
+  <h2>Total High Fives...{{hf.totalCount}}</h2>
+  <button ng-click='hf.highFive(hf.skill)'>Give High Five</button>
 </div>
